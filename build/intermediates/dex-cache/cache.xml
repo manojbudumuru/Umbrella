@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/manojbudumuru/Desktop/CrystalHC-android_mobileapp-18eac6756eb3/Umbrella/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/manojbudumuru/Desktop/CrystalHC-android_mobileapp-18eac6756eb3/Umbrella/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_3b4ee1743a9377049520e54abe844b9dc1b67c77/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/manojbudumuru/Desktop/CrystalHC-android_mobileapp-18eac6756eb3/Umbrella/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ead3e5e3be2b3d6ad112e38f998d43c0d0750f80">
+        <dex dex="/Users/manojbudumuru/Desktop/CrystalHC-android_mobileapp-18eac6756eb3/Umbrella/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_3b9c02efa71c7f0efa2af3ff748a9ca70f2094f7/classes.dex" />
+    </item>
+
+</items>
