@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -51,6 +52,7 @@ public class SettingsActivity extends Activity {
 
     private void showZipcodeDialog(){
         final EditText zip = new EditText(this);
+        zip.setGravity(Gravity.CENTER);
         AlertDialog alertDialog = new AlertDialog.Builder(SettingsActivity.this).create();
         alertDialog.setTitle("Enter ZipCode.");
         alertDialog.setView(zip);

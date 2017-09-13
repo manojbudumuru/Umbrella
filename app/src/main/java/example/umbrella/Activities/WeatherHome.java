@@ -10,6 +10,7 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.GridView;
@@ -99,7 +100,7 @@ public class WeatherHome extends Activity implements NetworkCallBacks {
                     LocalDataManager.getInstance().setZipCode(zipCode);
                     editor.putBoolean(UmbrellsConstants.zipCodeStatus,true);
                     editor.commit();
-                    progressDialog = ProgressDialog.show(WeatherHome.this, "", "Loading...");
+                    progressDialog = ProgressDialog.show(this, "", "Loading...");
                     new NetworkManager(this).execute(fullURL(zipCode,UmbrellsConstants.locationNameUrl),UmbrellsConstants.callTypeState);
                 }
             }else {
@@ -110,6 +111,7 @@ public class WeatherHome extends Activity implements NetworkCallBacks {
 
     private void showZipcodeDialog(){
         final EditText zip = new EditText(this);
+        zip.setGravity(Gravity.CENTER);
         AlertDialog alertDialog = new AlertDialog.Builder(WeatherHome.this).create();
         alertDialog.setTitle("Enter ZipCode.");
         alertDialog.setView(zip);
@@ -128,6 +130,7 @@ public class WeatherHome extends Activity implements NetworkCallBacks {
                             editor.commit();
                             zipCode= value;
                             LocalDataManager.getInstance().setZipCode(zipCode);
+                            progressDialog = ProgressDialog.show(WeatherHome.this, "", "Loading...");
                             new NetworkManager(WeatherHome.this).execute(fullURL(zipCode,UmbrellsConstants.locationNameUrl),UmbrellsConstants.callTypeState);
                             dialog.dismiss();
                         }
